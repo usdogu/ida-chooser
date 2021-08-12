@@ -1,7 +1,4 @@
-﻿// ida-chooser.cpp: Uygulamanın giriş noktasını tanımlar.
-//
-
-#include "ida-chooser.h"
+﻿#include "ida-chooser.h"
 
 using namespace std;
 
@@ -26,7 +23,7 @@ int main(int argc, char** argv)
 	{
 		ida_path = ida_path += "\\ida.exe\"  ";
 	}
-	
+
 	system(("\"" + ida_path + argv[1]).c_str());
 	return 0;
 }

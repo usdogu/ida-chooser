@@ -14,8 +14,8 @@ auto is_first_run() -> bool
 
 auto set_ida_path(std::string& path) -> void
 {
-	
-	if (ends_with(path,"\\") || ends_with(path,"/"))
+
+	if (ends_with(path, "\\") || ends_with(path, "/"))
 	{
 		path.pop_back();
 	}
@@ -59,14 +59,4 @@ auto get_ida_path() -> string
 	return string(data);
 }
 
-auto get_reg() -> void
-{
-	HKEY key = nullptr;
-	RegOpenKeyExA(HKEY_CURRENT_USER, "Software\\MadeForNet\\HTTPDebuggerPro", NULL, KEY_READ, &key);
-	char data[256]{};
-	DWORD data_size = sizeof(data);
-	RegQueryValueExA(key, "AppVer", nullptr, nullptr, reinterpret_cast<LPBYTE>(data), &data_size);
-	cout << reinterpret_cast<LPSTR>(data) << endl;
-	RegCloseKey(key);
-}
 
