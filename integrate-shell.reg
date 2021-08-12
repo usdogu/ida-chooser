@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+; Setup context menu item for click on right panel:
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.exe\shell\Open with IDA\command]
+; EXAMPLE
+;@="C:\\Users\\USPRO\\Desktop\\ida-chooser-cpp\\out\\build\\x64-Release\\ida-chooser.exe \"%1\""
+@="REPLACETHIS \"%1\""
