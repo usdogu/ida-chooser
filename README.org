@@ -1,0 +1,7 @@
+* IDA CHOOSER
+A Simple Program That Chooses The Right IDA For An Executable
+
+** How To Install
+- Download [[https://github.com/usdogu/ida-chooser/releases/download/v2.0.0/install.ps1][installer]]
+- Open an administrator powershell in the directory where you downloaded the installer.
+- Type .\installer.ps1 and follow the instructions.
