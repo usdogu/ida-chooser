@@ -25,5 +25,5 @@ func main() {
 	}
 	exec.Command(ida_path, os.Args[1]).Output()
 
-	//os.Exit(0)
+	os.Exit(0)
 }
