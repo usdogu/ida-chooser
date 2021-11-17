@@ -19,11 +19,11 @@ func main() {
 	ida_path := GetIDAPath()
 
 	if GetArch() == 0x8664 {
-		ida_path += `\ida64.exe `
+		ida_path += `\ida64.exe`
 	} else {
-		ida_path += `\ida.exe `
+		ida_path += `\ida.exe`
 	}
 
-	exec.Command(ida_path, os.Args[1])
-
+	cmd := exec.Command(ida_path, os.Args[1])
+	cmd.Start()
 }

@@ -33,7 +33,7 @@ func SetIDAPath(path string) {
 }
 
 func IsFirstRun() bool {
-	k, err := registry.OpenKey(registry.CURRENT_USER, `Software\IDAChooser`, registry.READ)
+	k, err := registry.OpenKey(registry.CURRENT_USER, `Software\IDAChooser`, registry.QUERY_VALUE)
 	if err != registry.ErrNotExist {
 		k.Close()
 	}
