@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 	"os/exec"
@@ -10,8 +11,8 @@ import (
 func main() {
 	if IsFirstRun() {
 		fmt.Print("Path to IDA folder: ")
-		var path string
-		fmt.Scanln(&path)
+		in := bufio.NewReader(os.Stdin)
+		path, _ := in.ReadString('\n')
 		path = strings.TrimSpace(path)
 		SetIDAPath(path)
 	}
