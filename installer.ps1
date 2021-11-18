@@ -1,5 +1,5 @@
 function Download-File {
-    Invoke-WebRequest -Uri "https://github.com/usdogu/ida-chooser/releases/download/v2.0.1/ida-chooser.exe" -OutFile ".\ida-chooser.exe"
+    Invoke-WebRequest -Uri "https://github.com/usdogu/ida-chooser/releases/download/v2.0.2/ida-chooser.exe" -OutFile ".\ida-chooser.exe"
 }
 
 
